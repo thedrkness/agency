@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+@font-face {
+  font-family: "Schabo";
+  font-weight: 700;
+  src: url("/fonts/SCHABO-Condensed.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Apfel Grotezk";
+  font-weight: 400;
+  src: url("/fonts/ApfelGrotezk-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Apfel Grotezk";
+  font-weight: 700;
+  src: url("/fonts/Apfel_Grotezk_Fett_700.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SuperLine";
+  src: url("/fonts/Superline-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SuperLine";
+  font-style: italic;
+  src: url("/fonts/Superline-Italic.ttf") format("truetype");
+}
+
+* {
+  font-family: Apfel Grotezk;
+  font-weight: 400;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.loaderContainer {
+  font-family: SuperLine;
+  font-style: italic;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("/assets/loaderbackground.svg");
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.loaderHidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader {
+  color: #000;
+  height: 150px;
+  width: 150px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  box-shadow: 0 0 17px 6px #00000033;
+  border-radius: 100%;
+}
+
+.loaderText {
+  font-family: SuperLine !important;
+  font-size: 64px;
+}
+
+.loaderContainer::after {
+  content: "";
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  border: 40px solid;
+  animation: loading 3s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+  25% {
+    border-top-color: rgba(255, 255, 255, 0.51);
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+
+  50% {
+    border-top-color: rgba(255, 255, 255, 0.51);
+    border-right-color: rgba(255, 255, 255, 0.51);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+
+  75% {
+    border-top-color: rgba(255, 255, 255, 0.51);
+    border-right-color: rgba(255, 255, 255, 0.51);
+    border-bottom-color: rgba(255, 255, 255, 0.51);
+    border-left-color: transparent;
+  }
+
+  100% {
+    border-top-color: rgba(255, 255, 255, 0.51);
+    border-right-color: rgba(255, 255, 255, 0.51);
+    border-bottom-color: rgba(255, 255, 255, 0.51);
+    border-left-color: rgba(255, 255, 255, 0.51);
+  }
+}
