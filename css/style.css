@@ -1,11 +1,142 @@
-body {
-  height: auto;
-  width: 100%;
-  overflow: hidden;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,200,1,0");
+
+
+@font-face {
+  font-family: "Apfel Grotezk";
+  font-weight: 400;
+  src: url("/fonts/ApfelGrotezk-Regular.otf") format("opentype");
 }
 
-.backgroundScroll img {
-  width: 150%;
-  transform: rotate(-10deg);
-  margin-top: 10px;
+@font-face {
+  font-family: "Joystix";
+  font-weight: 400;
+  src: url("/fonts/joystix.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Apfel Grotezk";
+  font-weight: 700;
+  src: url("/fonts/Apfel_Grotezk_Fett_700.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SuperLine";
+  src: url("/fonts/Superline-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "SuperLine";
+  font-style: italic;
+  src: url("/fonts/Superline-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Indivisible";
+  font-weight: 300;
+  src: url("/fonts/Indivisible-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Indivisible";
+  font-weight: 400;
+  src: url("/fonts/Indivisible-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Indivisible";
+  font-weight: 600;
+  src: url("/fonts/Indivisible-SemiBold.ttf") format("truetype");
+}
+
+* {
+  font-family: Indivisible;
+  font-weight: 400;
+}
+
+html,
+body {
+  width: auto;
+  height: 100%;
+  padding: 0;
+  overflow-x:hidden;
+  margin: 0;
+  background: black;
+  z-index: -1;
+  position: relative;
+  flex-direction: column;
+}
+
+/* Navigation */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 40px;
+}
+
+.headerLeft img {
+  width: 73px;
+  justify-content: center;
+  display: flex;
+  opacity: 0.8;
+}
+
+.middle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.headerMiddle {
+    color: white;
+    opacity: 0.8;
+}
+
+.middle img {
+    width: 80%;
+    opacity: 0.8;
+}
+
+.headerLeft {
+    display: flex;
+}
+
+.bottom p {
+    color: white;
+    opacity: 0.5;
+}
+
+.bottom img {
+    width: 14px;
+    padding-left: 10px;
+}
+
+.bottom a {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerRight p {
+    color: white;
+    opacity: 0.6;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
